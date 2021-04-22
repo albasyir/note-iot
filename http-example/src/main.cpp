@@ -73,6 +73,12 @@ void wifi_connection_setup()
  */
 void dweetRequestExample()
 {
+  // we dont carryout it if wifi doesn't connect!
+  if (WiFi.status() != WL_CONNECTED)
+  {
+    return;
+  }
+
   HTTPClient request;
 
   String ChipIdHex = String(ESP.getChipId(), HEX);
@@ -114,13 +120,6 @@ void setup()
 
 void loop()
 {
-  delay(2000);
-
-  // we dont carryout it if wifi doesn't connect!
-  if (WiFi.status() != WL_CONNECTED)
-  {
-    return;
-  }
-
   dweetRequestExample();
+  delay(30000);
 }
