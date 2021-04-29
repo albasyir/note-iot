@@ -24,8 +24,8 @@ enum LED
 String host = "http://dweet.io/dweet/for/mdp-";
 String npm = "1822250092";
 
-const char *wifi_name = "Luak White Coffee";
-const char *wifi_pass = "kopinikmattidakbikinkembung";
+const char *wifi_name = "ssid_name";
+const char *wifi_pass = "ssid_password";
 
 void led_toggle(int situation = !digitalRead(LED_BUILTIN))
 {
