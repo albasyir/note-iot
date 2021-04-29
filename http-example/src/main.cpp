@@ -101,6 +101,7 @@ void dweetRequestExample()
   {
     Serial.print("Error Code : ");
     Serial.println(result);
+    request.end();
     return;
   }
 
